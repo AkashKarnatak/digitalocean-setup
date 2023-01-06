@@ -22,4 +22,4 @@ curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.ba
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.bash_aliases -o ~/.bash_aliases
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.inputrc -o ~/.inputrc
 
-echo -e "\\nnLoad new configuration using,\n\tsource ~/.bashrc"
+echo -e "\\nnLoad new configuration using,\n\tsource ~/.bashrc && bind -f  ~/.inputrc"
