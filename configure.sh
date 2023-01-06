@@ -2,7 +2,7 @@
 
 LOCATION=$HOME
 
-echo "Backing up .bashrc, .bash_aliases and .inputrc"
+echo -e "\n\nBacking up .bashrc, .bash_aliases and .inputrc"
 
 if [ -f $HOME/.bashrc ]; then
   mv $HOME/.bashrc $HOME/.bashrc.bak
@@ -16,10 +16,10 @@ if [ -f $HOME/.inputrc ]; then
   mv $HOME/.inputrc $HOME/.inputrc.bak
 fi
 
-echo "Downloading new config..."
+echo -e "\nDownloading new config..."
 
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.bashrc -o ~/.bashrc
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.bash_aliases -o ~/.bash_aliases
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.inputrc -o ~/.inputrc
 
-echo -e "\nLoad new configuration using,\n\tsource ~/.bashrc"
+echo -e "\\nnLoad new configuration using,\n\tsource ~/.bashrc"
