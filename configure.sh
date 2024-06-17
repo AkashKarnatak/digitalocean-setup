@@ -32,6 +32,17 @@ cat << EOF >> $HOME/.gitconfig
   lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
 EOF
 
+echo -e "\nInstalling required software..."
+
+sudo apt update && sudo apt install -y neovim xclip
+
+mkdir -p $HOME/.config/nvim
+cat << EOF >> $HOME/.config/nvim/init.vim
+set number
+set nowrap
+set cursorline
+EOF
+
 echo -e "\nDownloading new config..."
 
 curl https://raw.githubusercontent.com/AkashKarnatak/digitalocean-setup/main/.bashrc -o ~/.bashrc
