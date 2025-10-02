@@ -41,6 +41,13 @@ cat << EOF >> $HOME/.config/nvim/init.vim
 set number
 set nowrap
 set cursorline
+set tabstop=2
+set shiftwidth=2
+set splitbelow
+set splitright
+set expandtab
+set smartindent
+colorscheme habamax
 EOF
 
 echo -e "\nDownloading new config..."
